@@ -15,8 +15,7 @@ The Docker hub build can be found here: [https://registry.hub.docker.com/u/richa
 ## Building from source
 To build from source you need to clone the git repo and run docker build:
 ```
-git clone https://github.com/ngineered/nginx-nodejs
-.git
+git clone https://github.com/ngineered/nginx-nodejs.git
 docker build -t nginx-nodejs:latest .
 ```
 
@@ -33,7 +32,7 @@ sudo docker run -d richarvey/nginx-nodejs
 
 You can then browse to ```http://<DOCKER_HOST>:8080``` to view the default install files. To find your ```DOCKER_HOST``` use the ```docker inspect``` to get the IP address.
 ### Installing NPM Components
-To install component for you node application to run simply include a ```packages.json``` file in the root of your application. The container will then install the components on start.
+To install component for you node application to run simply include a ```package.json``` file in the root of your application. The container will then install the components on start.
 ### Starting your application
 At the moment the container looks for ```server.js``` in your web root and executes that. Nginx is expecting your application to listen on port ```3000```. In future versions you'll be able to configure this.
 ### Available Configuration Parameters
